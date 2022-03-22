@@ -32,7 +32,7 @@ export default User;
 
 export async function getStaticPaths(context: any) {
 
-  //const res = await fetch(`http://localhost:3000/api/users`)
+  //const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/users`)
   //const data = await res.json();
 
   //const params = data.map((user: any) => {
@@ -54,7 +54,7 @@ export async function getStaticPaths(context: any) {
 
 export async function getStaticProps(context: any) {
 
-  const res = await fetch(`http://localhost:3000/api/user/${context.params.id}`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/user/${context.params.id}`)
   const data = await res.json();
 
   return {

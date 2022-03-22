@@ -19,7 +19,7 @@ export default ListStatic;
 
 export async function getStaticProps(context: any) {
 
-  const res = await fetch(`http://localhost:3000/api/sample-list`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/sample-list`)
   const data = await res.json();
 
   return {

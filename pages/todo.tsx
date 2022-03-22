@@ -19,7 +19,7 @@ export default TodoServer;
 
 export async function getServerSideProps(context: any) {
 
-  const res = await fetch(`http://localhost:3000/api/todo?lang=${context.locale}`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/todo?lang=${context.locale}`)
   const data = await res.json();
 
   return {

@@ -19,7 +19,7 @@ export default Users;
 
 export async function getServerSideProps(context: any) {
 
-  const res = await fetch(`http://localhost:3000/api/users`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/api/users`)
   const data = await res.json();
 
   return {
